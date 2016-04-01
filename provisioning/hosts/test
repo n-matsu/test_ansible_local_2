@@ -1,0 +1,6 @@
+[local]
+192.168.33.10
+
+# localhostの場合は必要らしい
+[local:vars]
+ansible_connection=local

@@ -1,0 +1,25 @@
+# region * role マトリクスに定義 
+
+[region1-webservers]
+aaa.aaa.aaa.aaa
+bbb.bbb.bbb.bbb
+
+[region2-webservers]
+ccc.ccc.ccc.ccc
+
+[region1-dbservers]
+ddd.ddd.ddd.ddd
+
+[region2-dbservers]
+eee.eee.eee.eee
+
+# role でグループ化
+
+[webservers:children]
+region1-webservers
+region2-webservers
+
+[dbservers:children]
+region1-dbservers
+region2-dbservers
+

@@ -1,0 +1,7 @@
+.vagrant/
+.vscode/
+*.tmp
+*.log
+*.bak
+node_modules/
+

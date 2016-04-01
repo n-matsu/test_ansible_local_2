@@ -1,17 +1,10 @@
-[local]
-192.168.33.10
-
-# localhostの場合は必要らしい
-[local:vars]
-ansible_connection=local
-
 # region * role マトリクスに定義 
 
 [local-webservers]
-local
+192.168.33.10
 
 [local-dbservers]
-local
+192.168.33.20
 
 # role でグループ化
 
@@ -20,3 +13,12 @@ local-webservers
 
 [dbservers:children]
 local-dbservers
+
+# 全部
+[all]
+webservers
+dbservers
+
+[all:vars]
+# localhostの場合は必要らしい
+ansible_connection=local

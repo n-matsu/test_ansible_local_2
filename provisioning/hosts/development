@@ -22,4 +22,3 @@ region2-webservers
 [dbservers:children]
 region1-dbservers
 region2-dbservers
-

@@ -8,6 +8,7 @@ Vagrant.configure(2) do |config|
 	
 	# haltしないでdestroyした時にエラーになる(provisionが走る)ので限定
 	# ansible_localでインストールされるansibleバージョンが上がれば多分発生しなくなる？
+	# vagrant(1.8.1)の方の問題かも
 	if ARGV[0] == "up" || ARGV[0] == "provision" then
 		config.vm.provision :ansible_local do |ansible|
 			ansible.install = true
